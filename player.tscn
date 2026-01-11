@@ -1,8 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://ywt5wln3lbjn"]
+[gd_scene load_steps=4 format=3 uid="uid://ywt5wln3lbjn"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kbkdt"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_yiqdt"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yoesc"]
+albedo_color = Color(1, 0, 0, 1)
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -12,3 +15,4 @@ shape = SubResource("CapsuleShape3D_kbkdt")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
 mesh = SubResource("CapsuleMesh_yiqdt")
+surface_material_override/0 = SubResource("StandardMaterial3D_yoesc")
